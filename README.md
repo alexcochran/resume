@@ -12,6 +12,8 @@ consumed by [applications that can build JSON Resumes](https://jsonresume.org/pr
 The goal of this project is to provide a quick, easy way to get started with the JSON Resume format. Just fork the code
 over to your profile, open the project in an environment that consumes Dev Containers, and get started.
 
+Consider using different branches to produce alternate versions of your resume for various jobs.
+
 ---
 
 <sub>Emoji used for repository logo designed by OpenMoji – the open-source emoji and icon project. License: CC BY-SA 4.0</sub>
