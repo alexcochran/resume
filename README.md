@@ -1,6 +1,6 @@
 # JSON Resume Template Environment
 
-A simple, containerized dev environment for editing your [JSON Resume](https://jsonresume.org/).
+Very simple, containerized dev environment for editing your [JSON Resume](https://jsonresume.org/).
 
 This repo is equipped with a [Dev Container](https://containers.dev/) configuration that sets your editor up with
 extensions and settings that will help you edit JSON files according to the [JSON Resume schema](https://jsonresume.org/schema/).
@@ -11,6 +11,12 @@ consumed by [applications that can build JSON Resumes](https://jsonresume.org/pr
 
 The goal of this project is to provide a quick, easy way to get started with the JSON Resume format. Just fork the code
 over to your profile, open the project in an environment that consumes Dev Containers, and get started.
+
+### Scripts
+
+`pnpx r
+
+### Branches as Distinct Resume Versions
 
 Consider using different branches to produce alternate versions of your resume for various jobs.
 

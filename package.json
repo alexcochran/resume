@@ -1,0 +1,33 @@
+{
+  "name": "jsonresume-dev-environment",
+  "version": "0.1.0",
+  "description": "A simple, containerized dev environment for editing your JSON Resume.",
+  "main": "index.js",
+  "scripts": {
+    "validate": "ts--node",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/alexlab-cloud/templates/jsonresume-dev-environment.git"
+  },
+  "keywords": [
+    "jsonresume",
+    "devcontainers"
+  ],
+  "author": "Alex Cochran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/alexlab-cloud/templates/jsonresume-dev-environment/issues"
+  },
+  "homepage": "https://gitlab.com/alexlab-cloud/templates/jsonresume-dev-environment#readme",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "prettier": "3.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "jsonschema": "^1.4.1"
+  }
+}
