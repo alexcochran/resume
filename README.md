@@ -6,6 +6,8 @@ This repo is equipped with a [Dev Container](https://containers.dev/) configurat
 extensions and settings that will help you edit JSON files according to the [JSON Resume schema](https://jsonresume.org/schema/).
 A CI/CD job also synchronizes a rendered HTML version of the `resume.json` file to GitLab Pages, where it can be viewed by anyone.
 
+[View the template `resume.json` for this project on Pages right now!](https://alexlab-cloud.gitlab.io/templates/jsonresume-dev-environment/resume)
+
 This project makes use of [rbardini's `resumed` project](https://github.com/rbardini/resumed), which offers a CLI for JSON Resume utilities.
 
 ## Usage
