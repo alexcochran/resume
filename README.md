@@ -14,7 +14,7 @@ over to your profile, open the project in an environment that consumes Dev Conta
 
 ### Scripts
 
-`pnpx r
+⏳
 
 ### Branches as Distinct Resume Versions
 
