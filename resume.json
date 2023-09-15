@@ -3,103 +3,124 @@
     "theme": "@jsonresume/jsonresume-theme-class"
   },
   "basics": {
-    "name": "@jsonresume/jsonresume-dev-environment",
-    "label": "Engineer",
+    "name": "Alex Cochran",
+    "label": "Software Engineer",
     "image": "https://openmoji.org/data/color/svg/1F916.svg",
-    "email": "jsonresume-dev-environment@example.com",
-    "phone": "(912) 555-4321",
-    "url": "https://gitlab.com/alexlab-cloud/templates/jsonresume-dev-environment",
-    "summary": "A summary of this person...",
+    "email": "contact@acochran.dev",
+    "url": "acochran.dev",
+    "summary": "Writing code and developing systems to solve complex problems is my passion.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
       "countryCode": "US",
-      "region": "California"
+      "region": "Colorado"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "john",
-        "url": "https://twitter.com/john"
+        "network": "GitLab",
+        "username": "alexcochran",
+        "url": "https://gitlab.com/alexcochran"
+      },
+      {
+        "network": "GitHub",
+        "username": "alexcochran",
+        "url": "https://github.com/alexcochran"
       }
     ]
   },
   "work": [
     {
-      "name": "Company",
-      "position": "President",
-      "url": "https://company.com",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
-      "summary": "Description…",
+      "name": "Cerkl",
+      "position": "Software & Integration Engineer",
+      "url": "https://cerkl.com",
+      "startDate": "2020-02-03",
+      "endDate": "2023-06-01",
+      "summary": "I wrote code for our APIs and integrations, as well as handling customer deployments.",
       "highlights": [
-        "Started the company"
+        "Developed Python & PHP REST API integrations for ETL with large customer datasets",
+        "Built and deployed containerized data transfer integration on customer’s infrastructure",
+        "Aggregated company data from multiple sources to build out a Customer Success database with a",
+        "frontend to accelerate support efforts and make finding information easier",
+        "Guided writing of customer integrations (mainly Python) against our REST API",
+        "Developed API endpoints to improve usability of our services",
+        "Took initiative to leverage Microsoft’s Power Platform to augment SharePoint Online integration",
+        "options in direct response to a customer need",
+        "Deployed self-hosted automations to send customer credentials securely",
+        "Configured and executed cloud builds and deployed services to Google Cloud Platform",
+        "○ Performed deployment of full sprint releases",
+        "Developed extensive and effective documentation for Cerkl’s APIs and integration designs",
+        "Crafted complex SQL queries for ad hoc reporting and customer support",
+        "Wrote Python applications to process and analyze datasets uploaded by customers for errors",
+        "Provided in-depth Python-based analysis of customer usage data to support feature requests"
       ]
-    }
-  ],
-  "volunteer": [
+    },
     {
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
+      "name": "Center for Pulmonary Imaging Research",
+      "position": "Graduate Research Software Engineer",
+      "url": "https://www.cincinnatichildrens.org/research",
+      "startDate": "2017-07-31",
+      "endDate": "2020-01-31",
+      "summary": "I conducted precinical lung MRI studies and wrote applications to analyze the resulting data.",
       "highlights": [
-        "Awarded 'Volunteer of the Month'"
+        "Collected data and wrote image processing and analysis software for preclinical MRI studies",
+        "Comprehensive ETL pipelines to produce images from raw data and compute statistics",
+        "Produced results for multiple studies on improving MRI and using it to track diseases",
+        "Redesigned and extended animal ventilation control system used during preclinical MRI",
+        "Introduced and implemented Git and GitHub in the lab to improve development practices"
       ]
     }
   ],
   "education": [
     {
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": [
-        "DB1101 - Basic SQL"
-      ]
-    }
-  ],
-  "awards": [
+      "institution": "University of Cincinnati",
+      "url": "https://ceas.uc.edu/",
+      "area": "Biomedical Engineering",
+      "studyType": "MS",
+      "endDate": "2023-05-15"
+    },
     {
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
+      "institution": "The Ohio State University",
+      "url": "https://engineering.osu.edu/",
+      "area": "Materials Science & Engineering",
+      "studyType": "BS",
+      "endDate": "2017-05-17"
     }
   ],
   "skills": [
     {
-      "name": "Web Development",
-      "level": "Master",
+      "name": "Frontend Development",
       "keywords": [
         "HTML",
         "CSS",
-        "JavaScript"
+        "JavaScript",
+        "TypeScript",
+        "Astro.js",
+        "React.js"
       ]
-    }
+    },
+    {
+      "name": "Backend Development",
+      "keywords": [
+        "Python",
+        "Flask",
+        "SQL",
+        "node.js",
+        "Ruby",
+        "Rails",
+        "PHP",
+        "REST APIs"
+      ]
+    },
+    {
+      "name": "Dev Ops",
+      "keywords": [
+        "Terraform",
+        "Ansible",
+        "Linux Server Admin",
+        "Build & Deploy",
+        "Ruby",
+        "Rails",
+        "REST APIs"
+      ]
+    },
   ],
   "languages": [
     {
@@ -109,29 +130,13 @@
   ],
   "interests": [
     {
-      "name": "Wildlife",
+      "name": "Outdoor Adventuring",
       "keywords": [
-        "Ferrets",
-        "Unicorns"
+        "Hiking",
+        "Mountains",
+        "Rafting",
+        "Skiing"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Project",
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
-      "highlights": [
-        "Won award at AIHacks 2016"
-      ],
-      "url": "https://project.com/"
     }
   ]
 }
