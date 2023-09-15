@@ -4,7 +4,8 @@
   "description": "A simple, containerized dev environment for editing your JSON Resume.",
   "main": "index.js",
   "scripts": {
-    "validate": "ts--node",
+    "validate": "npx resumed validate",
+    "render": "npx resumed render --output public/resume.html",
     "prepare": "husky install"
   },
   "repository": {
@@ -24,10 +25,10 @@
   "devDependencies": {
     "husky": "^8.0.3",
     "prettier": "3.0.3",
-    "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "jsonschema": "^1.4.1"
+    "@jsonresume/jsonresume-theme-class": "^0.2.5",
+    "resumed": "^3.0.1"
   }
 }

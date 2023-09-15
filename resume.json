@@ -1,15 +1,17 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+  "meta": {
+    "theme": "@jsonresume/jsonresume-theme-class"
+  },
   "basics": {
-    "name": "Dev Sample",
-    "label": "Programmer",
-    "image": "",
-    "email": "john@gmail.com",
+    "name": "@jsonresume/jsonresume-dev-environment",
+    "label": "Engineer",
+    "image": "https://openmoji.org/data/color/svg/1F916.svg",
+    "email": "jsonresume-dev-environment@example.com",
     "phone": "(912) 555-4321",
-    "url": "https://johndoe.com",
-    "summary": "A summary of Dev Sample…",
+    "url": "https://gitlab.com/alexlab-cloud/templates/jsonresume-dev-environment",
+    "summary": "A summary of this person...",
     "location": {
-      "address": "",
+      "address": "2712 Broadway St",
       "postalCode": "CA 94115",
       "city": "San Francisco",
       "countryCode": "US",
