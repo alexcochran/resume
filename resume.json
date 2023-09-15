@@ -99,12 +99,10 @@
     {
       "name": "Backend Development",
       "keywords": [
-        "Python",
-        "Flask",
+        "Python (Flask, Django)",
         "SQL",
         "node.js",
-        "Ruby",
-        "Rails",
+        "Ruby (Rails)",
         "PHP",
         "REST APIs"
       ]
@@ -114,11 +112,11 @@
       "keywords": [
         "Terraform",
         "Ansible",
+        "TeamCity",
+        "Google Cloud Platform",
+        "Microsoft Azure",
         "Linux Server Admin",
-        "Build & Deploy",
-        "Ruby",
-        "Rails",
-        "REST APIs"
+        "Builds & Deployments"
       ]
     }
   ],
@@ -130,12 +128,31 @@
   ],
   "interests": [
     {
+      "name": "Engineering",
+      "keywords": [
+        "Linux Desktop",
+        "Homelab (self-hosting)",
+        "Automation"
+      ]
+    },
+    {
       "name": "Outdoor Adventuring",
       "keywords": [
         "Hiking",
         "Mountains",
         "Rafting",
         "Skiing"
+      ]
+    },
+    {
+      "name": "Music",
+      "keywords": [
+        "Guitar",
+        "Jam",
+        "Jazz",
+        "Funk",
+        "Improvisation",
+        "Digital Audio Workstations"
       ]
     }
   ]
