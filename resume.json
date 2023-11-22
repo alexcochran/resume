@@ -1,14 +1,14 @@
 {
   "meta": {
-    "theme": "@jsonresume/jsonresume-theme-class"
+    "theme": "@jsonresume/jsonresume-theme-full"
   },
   "basics": {
     "name": "Alex Cochran",
-    "label": "Software Engineer",
+    "label": "Software & DevOps Engineer",
     "image": "https://openmoji.org/data/color/svg/1F916.svg",
     "email": "contact@acochran.dev",
     "url": "https://acochran.dev",
-    "summary": "Writing code and developing systems to solve complex problems is my passion.",
+    "summary": "Writing code to solve complex problems is my passion.",
     "location": {
       "countryCode": "US",
       "region": "Colorado"
@@ -33,23 +33,19 @@
       "url": "https://cerkl.com",
       "startDate": "2020-02-03",
       "endDate": "2023-06-01",
-      "summary": "I wrote code for our APIs and integrations, as well as handling customer deployments.",
+      "summary": "I developed APIs and integrations, deployed services, and configured customer environments.",
       "highlights": [
-        "Developed Python & PHP REST API integrations for ETL with large customer datasets",
-        "Built and deployed containerized data transfer integration on customer’s infrastructure",
-        "Aggregated company data from multiple sources to build out a Customer Success database with a",
-        "frontend to accelerate support efforts and make finding information easier",
-        "Guided writing of customer integrations (mainly Python) against our REST API",
-        "Developed API endpoints to improve usability of our services",
-        "Took initiative to leverage Microsoft’s Power Platform to augment SharePoint Online integration",
-        "options in direct response to a customer need",
-        "Deployed self-hosted automations to send customer credentials securely",
-        "Configured and executed cloud builds and deployed services to Google Cloud Platform",
-        "○ Performed deployment of full sprint releases",
-        "Developed extensive and effective documentation for Cerkl’s APIs and integration designs",
-        "Crafted complex SQL queries for ad hoc reporting and customer support",
-        "Wrote Python applications to process and analyze datasets uploaded by customers for errors",
-        "Provided in-depth Python-based analysis of customer usage data to support feature requests"
+        "Developed REST API integrations with Python & PHP for customer data ETL",
+        "Built custom containerized integration script for customer to deploy on own infrastructure",
+        "Aggregated company data to build an internal UI for accelerated support",
+        "Improved API with bug fixes and additional endpoints",
+        "Built demo Microsoft Power Platform integrations to improve SharePoint Online posting from our app",
+        "Implemented safer policies for sharing sensitive credentials",
+        "Operated service builds and deployments to to Google Cloud Platform",
+        "Produced documentation for Cerkl’s APIs (via OpenAPI), integrations, and interfaces",
+        "Designed SQL queries for ad hoc reporting and customer support",
+        "Built Python framework to analyze datasets uploaded by customers with error reporting",
+        "Supported feature requests with analysis of customer data"
       ]
     },
     {
@@ -58,13 +54,15 @@
       "url": "https://www.cincinnatichildrens.org/research",
       "startDate": "2017-07-31",
       "endDate": "2020-01-31",
-      "summary": "I conducted precinical lung MRI studies and wrote applications to analyze the resulting data.",
+      "summary": "I conducted precinical lung MRI studies and wrote applications to analyze the data.",
       "highlights": [
         "Collected data and wrote image processing and analysis software for preclinical MRI studies",
-        "Comprehensive ETL pipelines to produce images from raw data and compute statistics",
+        "Built ETL pipelines to produce internal images of mice from raw data",
+        "Visualized lung diseases and progression with computed maps of MRI metrics",
         "Produced results for multiple studies on improving MRI and using it to track diseases",
-        "Redesigned and extended animal ventilation control system used during preclinical MRI",
-        "Introduced and implemented Git and GitHub in the lab to improve development practices"
+        "Redesigned and extended Python-controlled animal ventilation control system used during MRI",
+        "Implemented Git and GitHub in the lab to improve development practices",
+        "Thesis:\"Improving and Validating Apparent Transverse Relaxation and 129Xe Apparent Diffusion Coefficient Mapping in Murine Lungs\""
       ]
     }
   ],
@@ -90,9 +88,12 @@
       "keywords": [
         "HTML",
         "CSS",
+        "Tailwind CSS",
+        "SCSS",
         "JavaScript",
         "TypeScript",
         "Astro.js",
+        "Gatsby",
         "React.js"
       ]
     },
@@ -100,7 +101,6 @@
       "name": "Backend Development",
       "keywords": [
         "Python (Flask, Django)",
-        "SQL",
         "node.js",
         "Ruby (Rails)",
         "PHP",
@@ -108,7 +108,17 @@
       ]
     },
     {
-      "name": "Dev Ops",
+      "name": "Databasing",
+      "keywords": [
+        "SQL",
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "ORM"
+      ]
+    },
+    {
+      "name": "DevOps",
       "keywords": [
         "Terraform",
         "Ansible",
@@ -116,6 +126,9 @@
         "Google Cloud Platform",
         "Microsoft Azure",
         "Linux Server Admin",
+        "CI/CD",
+        "GitLab CI/CD",
+        "GitHub Actions",
         "Builds & Deployments"
       ]
     }
@@ -124,7 +137,8 @@
     {
       "name": "Engineering",
       "keywords": [
-        "Linux Desktop",
+        "Linux",
+        "Dev Containers",
         "Homelab (self-hosting)",
         "Automation"
       ]
@@ -134,6 +148,7 @@
       "keywords": [
         "Hiking",
         "Mountains",
+        "Trail Running",
         "Rafting",
         "Skiing"
       ]
@@ -142,6 +157,7 @@
       "name": "Music",
       "keywords": [
         "Guitar",
+        "Electronic",
         "Jam",
         "Jazz",
         "Funk",
