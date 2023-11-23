@@ -1,6 +1,6 @@
 {
   "meta": {
-    "theme": "@jsonresume/jsonresume-theme-full"
+    "theme": "jsonresume-theme-full-ext"
   },
   "basics": {
     "name": "Alex Cochran",
@@ -42,7 +42,7 @@
         "Built demo Microsoft Power Platform integrations to improve SharePoint Online posting from our app",
         "Implemented safer policies for sharing sensitive credentials",
         "Operated service builds and deployments to to Google Cloud Platform",
-        "Produced documentation for Cerkl’s APIs (via OpenAPI), integrations, and interfaces",
+        "Produced documentation for Cerkl's APIs (via OpenAPI), integrations, and interfaces",
         "Designed SQL queries for ad hoc reporting and customer support",
         "Built Python framework to analyze datasets uploaded by customers with error reporting",
         "Supported feature requests with analysis of customer data"
