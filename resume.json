@@ -59,11 +59,21 @@
         "Collected data and wrote image processing and analysis software for preclinical MRI studies",
         "Built ETL pipelines to produce internal images of mice from raw data",
         "Visualized lung diseases and progression with computed maps of MRI metrics",
-        "Produced results for multiple studies on improving MRI and using it to track diseases",
         "Redesigned and extended Python-controlled animal ventilation control system used during MRI",
-        "Implemented Git and GitHub in the lab to improve development practices",
-        "Thesis:\"Improving and Validating Apparent Transverse Relaxation and 129Xe Apparent Diffusion Coefficient Mapping in Murine Lungs\""
+        "Implemented Git and GitHub in the lab to improve development practices"
       ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Biomedical Engineering MS Thesis",
+      "description": "Describes validations and improvements for methods in preclinical lung MRI.",
+      "highlights": [
+        "Novel MRI data analysis",
+        "Tracked lung disease progression in mice with T2* maps made from 1H ultrashort echo (UTE) images",
+        "Validated unnecessity of cardiac gating in 129Xe apparent diffusion coefficient (ADC) imaging"
+      ],
+      "url": "http://rave.ohiolink.edu/etdc/view?acc_num=ucin168130421443841"
     }
   ],
   "education": [
