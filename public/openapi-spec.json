@@ -1,0 +1,21 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "0.2.0",
+    "title": "jsonresume-alexcochran",
+    "description": "alexcochran's JSON Resume as a service."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000",
+      "description": "dev"
+    }
+  ],
+  "tags": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "paths": {}
+}

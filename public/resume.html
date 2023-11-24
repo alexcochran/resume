@@ -1,420 +1,574 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui" />
+    <title>Alex Cochran - Software &amp; DevOps Engineer</title>
+    <style>
+      :root {
+        --accent: #bc1b39;
+        --anchor-color: #2c85b1;
+        --blue: #2c85b1;
+        --copy-color-light: #666666;
+        --copy-color: #242424;
+        --grey: #999999;
+        --light-grey: #ededed;
+        --white: #ffffff;
+        --base-font-size: 12pt;
+        --spacing-double: 1rem;
+        --spacing-small: 0.1rem;
+        --spacing: 0.5rem;
+      }
+      @media (min-width: 567px) {
+        :root {
+          --spacing-double: 1.5rem;
+          --spacing-small: 0.25rem;
+          --spacing: 0.75rem;
+        }
+      }
+      @media print {
+        :root {
+          --anchor-color: #000000;
+          --base-font-size: 9pt;
+          --copy-color-light: #000000;
+          --copy-color: #000000;
+        }
+      }
 
-  <title>@jsonresume/jsonresume-dev-environment - CV</title>
-  <meta name="description" content="A summary of this person...">
+      body {
+        color: var(--copy-color);
+        display: flex;
+        font:
+          var(--base-font-size) 'Open Sans',
+          Helvetica,
+          Arial,
+          sans-serif;
+        justify-content: center;
+        line-height: 1.25;
+        -webkit-print-color-adjust: exact;
+      }
 
-  <meta property="og:site_name" content="@jsonresume/jsonresume-dev-environment">
-  <meta property="og:title" content="Engineer">
-  <meta property="og:description" content="A summary of this person...">
+      em {
+        color: var(--grey);
+      }
 
-  <link rel="icon" href="https://openmoji.org/data/color/svg/1F916.svg">
-  <meta property="og:image" content="https://openmoji.org/data/color/svg/1F916.svg">
-  <meta property="og:image:alt" content="Avatar of @jsonresume/jsonresume-dev-environment.">
+      p {
+        font-size: 90%;
+      }
 
-  <meta name="twitter:site" content="@john">
+      a {
+        color: var(--anchor-color);
+        font-weight: 400;
+        text-decoration: none;
+      }
 
-  <style>
-  /*! normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+      ul {
+        margin-bottom: 0;
+      }
 
-/* Variables */
+      section {
+        margin: var(--spacing) 0 var(--spacing-double);
+      }
 
-body {
-  --fg-color: black;
-  --bg-color: #FFFFFF;
-  --header-h1-fg-color: #FFFFFF;
-  --header-h2-fg-color: #F3F3F3;
-  --header-bg-color: #1866C3;
-  --link-color: #3061A5;
-  --seperator-color: #E2E2E2
-}
+      blockquote {
+        margin-bottom: 0 0 var(--spacing);
+      }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    --fg-color: #D5D6D7;
-    --bg-color: #2C2C2C;
-    --header-h1-fg-color: #CFD0D1;
-    --header-h2-fg-color: #D5D6D7;
-    --header-bg-color: #1B1B1B;
-    --link-color: #70A1E5;
-    --seperator-color: #939393
+      #resume {
+        background: var(--white);
+        margin: var(--spacing) var(--spacing-double);
+        max-width: 760px;
+      }
+
+      section.heading header h1 {
+        font-size: 180%;
+        font-weight: 300;
+        margin: 0;
+      }
+      section.heading header h2 {
+        font-size: 140%;
+        font-weight: 400;
+        margin: 0;
+      }
+      section.heading header h2::after {
+        display: none;
+      }
+      section.heading header .contact {
+        display: flex;
+        flex-direction: column;
+        /* padding-bottom: var(--spacing); */
+      }
+
+      section.heading header .header-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+      @media (max-width: 567px) {
+        section.heading header .header-container {
+          flex-direction: column;
+        }
+      }
+      @media print {
+        section.heading header .header-container {
+          flex-direction: row;
+        }
+      }
+
+      /* @media (min-width: 567px) {
+  section.heading header .contact {
+    flex-direction: row;
+    justify-content: space-between;
   }
-}
+} */
+      section.heading header address {
+        font-size: 90%;
+        font-style: normal;
+        /* padding-bottom: var(--spacing); */
+      }
+      section.heading .profiles {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: var(--spacing);
+      }
 
-/* Page CSS */
+      /* @media (min-width: 567px) { */
+      section.heading .profiles {
+        flex-direction: row;
+        justify-content: start;
+      }
+      /* } */
+      section.heading .profiles .profile.print {
+        display: none;
+      }
+      /* @media print {
+  section.heading .profiles .profile.print {
+    display: block;
+  }
+} */
+      section.heading .profiles strong {
+        margin: 0 var(--spacing-small) 0 0;
+      }
+      section.heading .profiles span {
+        margin: 0 var(--spacing-double) 0 0;
+      }
 
-body {
-  color: var(--fg-color);
-  background: var(--bg-color);
-  font-size: 0.9em;
-  font-family: 'Helvetica', 'Arial', 'Trebuchet MS', 'Verdana', sans-serif;
-}
+      section.experience .item {
+        border-bottom: 1px solid var(--light-grey);
+        margin: 0 0 0.5em;
+        padding: 0 0 0.5em;
+      }
+      section.experience .item:last-child {
+        border-bottom: none;
+      }
+      section.experience .item header a,
+      section.experience .item header h3 {
+        color: var(--copy-color);
+        display: inline-block;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      @media (max-width: 566px) {
+        section.experience .item header .subhead {
+          flex-direction: column;
+          margin-bottom: var(--spacing-double);
+        }
+      }
+      section.experience .item .summary p {
+        margin-top: var(--spacing);
+      }
+      section.experience .item .summary p:first-child {
+        margin-top: var(--spacing-small);
+      }
+      section.experience .item .summary p:last-child {
+        margin-bottom: var(--spacing-small);
+      }
+      section.experience .item .position {
+        color: var(--copy-color-light);
+        font-size: 100%;
+        font-weight: 500;
+        margin: var(--spacing-small) 0;
+      }
+      section.experience .item .startDate,
+      section.experience .item .endDate {
+        color: var(--grey);
+      }
+      section.skills .item {
+        margin: 0;
+        padding: 0 0 var(--spacing);
+      }
+      section.skills .item:first-child {
+        margin-top: var(--spacing);
+      }
+      section.skills .item:last-child {
+        margin-bottom: var(--spacing);
+      }
+      section.skills .item .name {
+        display: inline-block;
+        font-size: 90%;
+        font-weight: 600;
+        margin: 0 var(--spacing) 0 0;
+        text-transform: uppercase;
+        vertical-align: top;
+        white-space: nowrap;
+      }
+      section.skills .item .keywords {
+        display: inline;
+        font-size: 90%;
+        vertical-align: top;
+      }
 
-em {
-  color: #999;
-}
+      section.volunteering .item .position {
+        font-weight: 600;
+      }
+      section.volunteering .item header .subhead {
+        margin-top: var(--spacing);
+      }
+      section.projects .item strong {
+        color: var(--copy-color-light);
+        font-weight: 600;
+        display: inline-block;
+        /* padding-top: var(--spacing); */
+      }
+      section.awards .item .title {
+        font-weight: 600;
+      }
+      section.publications .item .name {
+        font-weight: 600;
+      }
+      section.languages .language-item {
+        align-items: baseline;
+        display: flex;
+        justify-content: start;
+      }
+      section.languages .language-item:first-child {
+        margin-top: var(--spacing);
+      }
+      section.languages .language-item:last-child {
+        margin-bottom: var(--spacing);
+      }
+      section.languages .language-item .language {
+        display: inline-block;
+        font-size: 90%;
+        font-weight: 600;
+        margin: 0 var(--spacing) 0 0;
+        text-transform: uppercase;
+        vertical-align: top;
+        white-space: nowrap;
+      }
+      section.languages .language-item .fluency {
+        color: var(--copy-color-light);
+        font-style: italic;
+      }
 
-p {
-  line-height: 1.4;
-}
+      section.interests .item {
+        margin-bottom: var(--spacing);
+      }
+      section.interests .item:last-child {
+        margin-bottom: var(--spacing);
+      }
+      section.interests .item .name {
+        display: inline-block;
+        font-size: 90%;
+        font-weight: 600;
+        margin: 0 var(--spacing) 0 0;
+        text-transform: uppercase;
+        vertical-align: top;
+        white-space: nowrap;
+      }
 
-a {
-  color: var(--link-color);
-  text-decoration: none;
-}
+      section.references .item blockquote {
+        font-style: italic;
+        margin-bottom: 0;
+        margin-left: var(--spacing);
+      }
+      section.references .item .name {
+        color: var(--copy-color-light);
+      }
 
-ul {
-  margin-bottom: 0;
-}
-section {
-  margin-bottom: 2em;
-}
+      section h2 {
+        color: var(--accent);
+        font-size: 135%;
+        font-weight: 400;
+        margin: 0 0 var(--spacing-double);
+        position: relative;
+        text-transform: uppercase;
+      }
+      section h2::after {
+        background: var(--accent);
+        bottom: -10px;
+        content: ' ';
+        display: inline-block;
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 2.5rem;
+      }
+      section header h3 {
+        margin: 0;
+        font-weight: 600;
+      }
 
-blockquote {
-  margin: 0;
-  margin-bottom: 1em;
-}
+      section.experience .item .highlights,
+      section.volunteering .highlights,
+      section.projects .highlights,
+      section.projects .keywords,
+      section.projects .roles,
+      section.education .item .courses {
+        font-size: 90%;
+        line-height: 1.3;
+        list-style: square;
+        margin: var(--spacing-small) 0 var(--spacing);
+        padding-left: var(--spacing-double);
+      }
 
-.item {
-  break-inside: avoid;
-}
+      section.experience .item,
+      section.volunteering .item,
+      section.projects .item,
+      section.education .item,
+      section.awards .item,
+      section.publications .item,
+      section.interests .item,
+      section.references .item {
+        page-break-inside: avoid;
+      }
 
-header {
-  background: var(--header-bg-color);
-  padding: 50px;
-  margin-bottom: 50px;
-}
+      /* @media print {
+  section.heading .profiles .profile:not(.print), section.publications .item .website {
+    display: none;
+  }
+} */
 
-header h1 {
-  color: var(--header-h1-fg-color);
-  max-width: 772px;
-  margin: 0 auto;
-}
+      section.experience .item header .subhead,
+      section.volunteering .item header .subhead,
+      section.projects .item header,
+      section.education .item header,
+      section.awards .item header,
+      section.publications .item .subhead {
+        align-items: baseline;
+        display: flex;
+        justify-content: space-between;
+      }
+      @media (min-width: 567px) {
+        section.experience .item header .subhead,
+        section.volunteering .item header .subhead,
+        section.projects .item header,
+        section.education .item header,
+        section.awards .item header,
+        section.publications .item .subhead {
+          flex-direction: row;
+        }
+      }
 
-header h2 {
-  color: var(--header-h2-fg-color);
-  font-size: 1em;
-  max-width: 772px;
-  margin: 0 auto;
-}
+      @media print {
+        section.experience .item header .subhead,
+        section.volunteering .item header .subhead,
+        section.projects .item header,
+        section.education .item header,
+        section.awards .item header,
+        section.publications .item .subhead {
+          flex-direction: row;
+        }
+      }
 
-.container {
-  max-width: 772px;
-  padding: 0 50px;
-  margin: 0 auto;
-}
+      @media print {
+        body {
+          font-size: 11pt;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    </style>
+    <style media="print">
+      body {
+        font-size: 12px;
+      }
+    </style>
 
-#basics {
-  margin-bottom: 10px;
-  border-bottom: 1px var(--seperator-color) solid;
-}
-#basics h3 {
-  margin-bottom: 10px;
-}
-
-.contact h3 {
-  padding-bottom: 10px;
-}
-
-.split {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.split strong {
-  margin-right: 2em;
-}
-
-.website,
-.email,
-.phone {
-  margin-bottom: 10px;
-  width: 50%;
-}
-
-#profiles {
-  overflow: hidden;
-}
-
-#profiles .item {
-  width: 50%;
-}
-
-.username{
-  margin-top: 10px;
-}
-
-.work_date,
-.work_position,
-.work_website,
-.institution,
-.study_date,
-.qualification {
-  margin-bottom: 10px;
-  width: 30%;
-}
-
-.courses {
-  clear: both;
-}
-
-.dissertation {
-  margin-top: 10px;
-}
-
-#work,
-#volunteer {
-  padding-bottom: 5px;
-  border-bottom: 1px var(--seperator-color) solid;
-}
-
-#work .item,
-#volunteer .item {
-  margin: 25px 0;
-}
-
-#skills {
-  margin-bottom: 10px;
-  border-bottom: 1px var(--seperator-color) solid;
-  padding-bottom: 5px;
-}
-
-#skills .item,
-#languages .item {
-  margin: 0 0 25px 0;
-}
-
-#interests .item {
-  margin-bottom: 25px;
-}
-
-#skills {
-  overflow: hidden;
-}
-
-#languages .item,
-#interests .item,
-#skills .item {
-  width: 50%;
-}
-
-#references,
-#interests {
-  clear: both;
-}
-
-  </style>
-
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <div id="resume">
+      <section id="heading" class="heading">
+        <header>
+          <div class="header-container">
+            <div>
+              <h1>Alex Cochran</h1>
+              <h2>Software &amp; DevOps Engineer</h2>
+            </div>
+            <div class="contact">
+              <span class="contact-detail"><a href="mailto:contact@acochran.dev">contact@acochran.dev</a></span>
+              <span class="contact-detail"
+                ><a href="https://acochran.dev" target="external">https://acochran.dev</a></span
+              >
+              <address>
+                <span class="address-detail">Colorado</span>
+                <span class="address-detail">US</span>
+              </address>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Writing code to solve complex problems is my passion.</p>
+          </div>
+        </header>
 
-  <header>
-  <h1>@jsonresume/jsonresume-dev-environment</h1>
-  <h2>Engineer</h2>
-  </header>
-
-  <div id="content" class="container">
-  <section id="basics">
-    <div class="contact">
-    <h3>Contact</h3>
-    <div class="split">
-    <div class="website">
-      <strong>Website</strong>
-      <a href="https://gitlab.com/alexlab-cloud/templates/jsonresume-dev-environment">https://gitlab.com/alexlab-cloud/templates/jsonresume-dev-environment</a>
-    </div>
-    <div class="email">
-      <strong>Email</strong>
-      <a href="mailto:jsonresume-dev-environment@example.com">jsonresume-dev-environment@example.com</a>
-    </div>
-    <div class="phone">
-      <strong>Phone</strong>
-      <a href="tel:(912) 555-4321">(912) 555-4321</a>
-    </div>
-    </div>
-    </div>
-    <div class="summary">
-      <h3>About</h3>
-      <p>A summary of this person...</p>
-    </div>
-    <section id="profiles" class="split">
-      <div class="item">
-        <strong class="network">
-          Twitter
-        </strong>
-        <div>
-          <a href="https://twitter.com/john">
-              john
-          </a>
+        <div class="profiles">
+          <div class="profile">
+            <strong class="network">GitLab</strong>
+            <span class="username">
+              <a href="https://gitlab.com/alexcochran" target="external">@alexcochran</a>
+            </span>
+          </div>
+          <div class="profile print">
+            <span class="username"> https://gitlab.com/alexcochran </span>
+          </div>
+          <div class="profile">
+            <strong class="network">GitHub</strong>
+            <span class="username">
+              <a href="https://github.com/alexcochran" target="external">@alexcochran</a>
+            </span>
+          </div>
+          <div class="profile print">
+            <span class="username"> https://github.com/alexcochran </span>
+          </div>
         </div>
-      </div>
-    </section>
-  </section>
-
-  <section id="work">
-    <h2>Work Experience</h2>
-    <div class="item">
-      <h3 class="work_name">
-        Company
-      </h3>
-
-      <div class="split">
-      <div class="work_position">
-        President
-      </div>
-
-      <div class="work_date">
-        <span class="startDate">
-          <time datetime="2013-01-01T00:00:00.000Z">Jan 2013</time>
-        </span>
-        <span class="endDate">
-          - <time datetime="2014-01-01T00:00:00.000Z">Jan 2014</time>
-        </span>
-      </div>
-
-      <div class="work_website">
-        <a href="https://company.com">https://company.com</a>
-      </div>
-      </div>
-
-      <div class="summary">
-        <p>Description…</p>
-      </div>
-      <ul class="highlights">
-        <li>Started the company</li>
-      </ul>
+      </section>
+      <section id="skills" class="skills">
+        <div class="item">
+          <h2>Skills</h2>
+          <div class="name">Frontend Development</div>
+          <div class="keywords">HTML, CSS, Tailwind CSS, SCSS, JavaScript, TypeScript, Astro.js, Gatsby, React.js</div>
+        </div>
+        <div class="item">
+          <div class="name">Backend Development</div>
+          <div class="keywords">Python (Flask, Django), node.js, Ruby (Rails), PHP, REST APIs</div>
+        </div>
+        <div class="item">
+          <div class="name">Databasing</div>
+          <div class="keywords">SQL, PostgreSQL, MySQL, SQLite, ORM</div>
+        </div>
+        <div class="item">
+          <div class="name">DevOps</div>
+          <div class="keywords">
+            Terraform, Ansible, TeamCity, Google Cloud Platform, Microsoft Azure, Linux Server Admin, CI/CD, GitLab
+            CI/CD, GitHub Actions, Builds &amp; Deployments
+          </div>
+        </div>
+      </section>
+      <section id="experience" class="experience">
+        <section class="item">
+          <h2>Experience</h2>
+          <header>
+            <h3 class="name">
+              <a href="https://cerkl.com" target="external">Cerkl</a>
+            </h3>
+            <div class="subhead">
+              <span class="position">Software &amp; Integration Engineer</span>
+              <small class="dates">Feb 2020 - Jun 2023</small>
+            </div>
+          </header>
+          <div class="summary">
+            <p>I developed APIs and integrations, deployed services, and configured customer environments.</p>
+          </div>
+          <ul class="highlights">
+            <li>Developed REST API integrations with Python &amp; PHP for customer data ETL</li>
+            <li>Built custom containerized integration script for customer to deploy on own infrastructure</li>
+            <li>Aggregated company data to build an internal UI for accelerated support</li>
+            <li>Improved API with bug fixes and additional endpoints</li>
+            <li>Built demo Microsoft Power Platform integrations to improve SharePoint Online posting from our app</li>
+            <li>Implemented safer policies for sharing sensitive credentials</li>
+            <li>Operated service builds and deployments to to Google Cloud Platform</li>
+            <li>Produced documentation for Cerkl’s APIs (via OpenAPI), integrations, and interfaces</li>
+            <li>Designed SQL queries for ad hoc reporting and customer support</li>
+            <li>Built Python framework to analyze datasets uploaded by customers with error reporting</li>
+            <li>Supported feature requests with analysis of customer data</li>
+          </ul>
+        </section>
+        <section class="item">
+          <header>
+            <h3 class="name">
+              <a href="https://www.cincinnatichildrens.org/research" target="external"
+                >Center for Pulmonary Imaging Research</a
+              >
+            </h3>
+            <div class="subhead">
+              <span class="position">Graduate Research Software Engineer</span>
+              <small class="dates">Jul 2017 - Jan 2020</small>
+            </div>
+          </header>
+          <div class="summary">
+            <p>I conducted precinical lung MRI studies and wrote applications to analyze the data.</p>
+          </div>
+          <ul class="highlights">
+            <li>Collected data and wrote image processing and analysis software for preclinical MRI studies</li>
+            <li>Built ETL pipelines to produce internal images of mice from raw data</li>
+            <li>Visualized lung diseases and progression with computed maps of MRI metrics</li>
+            <li>Produced results for multiple studies on improving MRI and using it to track diseases</li>
+            <li>Redesigned and extended Python-controlled animal ventilation control system used during MRI</li>
+            <li>Implemented Git and GitHub in the lab to improve development practices</li>
+            <li>
+              Thesis:&quot;Improving and Validating Apparent Transverse Relaxation and 129Xe Apparent Diffusion
+              Coefficient Mapping in Murine Lungs&quot;
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section id="education" class="education">
+        <div class="item">
+          <h2>Education</h2>
+          <header>
+            <h3 class="name">University of Cincinnati</h3>
+            <small class="dates">
+              <span class="endDate"> - May 2023</span>
+            </small>
+          </header>
+          <div class="qualification">
+            <span class="studyType">MS</span>
+            <span class="area">Biomedical Engineering</span>
+          </div>
+        </div>
+        <div class="item">
+          <header>
+            <h3 class="name">The Ohio State University</h3>
+            <small class="dates">
+              <span class="endDate"> - May 2017</span>
+            </small>
+          </header>
+          <div class="qualification">
+            <span class="studyType">BS</span>
+            <span class="area">Materials Science &amp; Engineering</span>
+          </div>
+        </div>
+      </section>
+      <section id="interests" class="interests">
+        <div class="item">
+          <h2>Interests</h2>
+          <span class="name">Engineering</span>
+          <span class="name">:</span>
+          <span class="keywords">
+            <span>Linux</span>, <span>Dev Containers</span>, <span>Homelab (self-hosting)</span>,
+            <span>Automation</span>
+          </span>
+        </div>
+        <div class="item">
+          <span class="name">Outdoor Adventuring</span>
+          <span class="name">:</span>
+          <span class="keywords">
+            <span>Hiking</span>, <span>Mountains</span>, <span>Trail Running</span>, <span>Rafting</span>,
+            <span>Skiing</span>
+          </span>
+        </div>
+        <div class="item">
+          <span class="name">Music</span>
+          <span class="name">:</span>
+          <span class="keywords">
+            <span>Guitar</span>, <span>Electronic</span>, <span>Jam</span>, <span>Jazz</span>, <span>Funk</span>,
+            <span>Improvisation</span>,
+            <span>Digital Audio Workstations</span>
+          </span>
+        </div>
+      </section>
     </div>
-  </section>
-
-  <section id="volunteer">
-    <h2>Volunteer</h2>
-    <div class="item">
-      <h3 class="company">
-        Organization
-      </h3>
-
-      <div class="split">
-      <div class="work_position">
-        Volunteer
-      </div>
-
-      <div class="work_date">
-        <span class="startDate">
-          <time datetime="2012-01-01T00:00:00.000Z">Jan 2012</time>
-        </span>
-        <span class="endDate">
-          - <time datetime="2013-01-01T00:00:00.000Z">Jan 2013</time>
-        </span>
-      </div>
-
-      <div class="work_website">
-        <a href="https://organization.com/">https://organization.com/</a>
-      </div>
-      </div>
-
-      <div class="summary">
-        <p>Description…</p>
-      </div>
-      <ul class="highlights">
-        <li>Awarded &#39;Volunteer of the Month&#39;</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="item">
-
-      <div class="split">
-      <div class="institution">
-        University
-      </div>
-
-      <div class="study_date">
-        <span class="startDate">
-          <time datetime="2011-01-01T00:00:00.000Z">Jan 2011</time>
-        </span>
-        <span class="endDate">
-          - <time datetime="2013-01-01T00:00:00.000Z">Jan 2013</time>
-        </span>
-      </div>
-
-      <div class="work_website">
-        <a href="https://institution.com/">https://institution.com/</a>
-      </div>
-      </div>
-
-
-      <ul class="courses">
-        <li>DB1101 - Basic SQL</li>
-      </ul>
-
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="item">
-      <div class="name">
-        Web Development
-      </div>
-      <div class="level">
-        <em>Master</em>
-      </div>
-      <ul class="keywords">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="languages">
-    <h2>Languages</h2>
-    <div class="item">
-      <div class="language">
-        English
-      </div>
-      <div class="level">
-        <em>Native speaker</em>
-      </div>
-    </div>
-  </section>
-
-  <section id="interests">
-    <h2>Interests</h2>
-    <div class="item">
-      <div class="name">
-        Wildlife
-      </div>
-      <ul class="keywords">
-        <li>Ferrets</li>
-        <li>Unicorns</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="references">
-    <h2>References</h2>
-    <div class="item">
-      <blockquote class="reference">
-        Reference…
-      </blockquote>
-      <div class="name">
-        — Jane Doe
-      </div>
-    </div>
-  </section>
-
-  </div>
-
-  <script>
-    console.log('Theme made with 💕 using JSON Resume and Handlebars!\nhttps://github.com/jsonresume/jsonresume-theme-class')
-  </script>
   </body>
 </html>
