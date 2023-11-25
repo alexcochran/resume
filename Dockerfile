@@ -14,4 +14,3 @@ RUN pnpm run build
 EXPOSE 5000
 
 CMD ["pnpm", "start"]
-

@@ -10,7 +10,7 @@
   "main": "src/index.ts",
   "scripts": {
     "validate": "npx resumed validate",
-    "render": "npx resumed render --output public/resume.html",
+    "render": "npx resumed render --output public/jsonresume.html",
     "prepare": "husky install",
     "start": "tsc && node ./dist/index.js",
     "dev": "nodemon src/index.ts",
@@ -60,6 +60,8 @@
     "helmet": "^7.1.0",
     "jsonresume-theme-full-ext": "1.2.0",
     "morgan": "^1.10.0",
+    "pino": "^8.16.2",
+    "pino-http": "^8.5.1",
     "resumed": "^3.0.1"
   }
 }
