@@ -13,7 +13,7 @@
   },
 
   "include": ["./*.js", "src/**/*.ts", "test/**/*.ts", "public/**/*.html", "public/jsonresume.html"],
-  "hooks": ["copy-files"],
+  // "hooks": ["copy-files"],
 
   // Most ts-node options can be specified here using their programmatic names.
   "ts-node": {

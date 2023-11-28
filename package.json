@@ -69,7 +69,6 @@
     "puppeteer": "^21.5.2",
     "rapidoc": "^9.3.4",
     "resumed": "^3.0.1",
-    "swagger-autogen": "^2.23.7",
-    "tsc-hooks": "^1.1.2"
+    "swagger-autogen": "^2.23.7"
   }
 }
