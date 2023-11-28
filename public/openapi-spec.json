@@ -9,6 +9,10 @@
     {
       "url": "http://localhost:5280/api/v1",
       "description": "dev"
+    },
+    {
+      "url": "https://resume.acochran.dev/api/v1",
+      "description": "prod"
     }
   ],
   "tags": [
@@ -18,21 +22,6 @@
     }
   ],
   "paths": {
-    "/": {
-      "get": {
-        "tags": [
-          "Resume"
-        ],
-        "summary": "Retrieve Alex's entire JSON Resume.",
-        "description": "",
-        "operationId": "getResume",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/downloads/html": {
       "get": {
         "tags": [
@@ -54,6 +43,41 @@
           },
           "404": {
             "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/docs/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/docs/openapi-spec": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "Resume"
+        ],
+        "summary": "Retrieve Alex's entire JSON Resume.",
+        "description": "",
+        "operationId": "getResume",
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -158,7 +182,89 @@
   },
   "components": {
     "schemas": {
-      "resumeSchema": {}
+      "basicsSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Alex Cochran"
+          },
+          "label": {
+            "type": "string",
+            "example": "Software Engineer"
+          },
+          "image": {
+            "type": "string",
+            "example": "https://picsum.photos/200/300"
+          },
+          "email": {
+            "type": "string",
+            "example": "john@gmail.com"
+          },
+          "phone": {
+            "type": "string",
+            "example": "(912) 555-4321"
+          },
+          "url": {
+            "type": "string",
+            "example": "https://example.com"
+          },
+          "summary": {
+            "type": "string",
+            "example": "A summary of John Doe..."
+          },
+          "location": {
+            "type": "string",
+            "example": "#locationSchema"
+          }
+        },
+        "required": [
+          "name",
+          "label"
+        ]
+      },
+      "locationSchema": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "example": "11500 Highway 150"
+          },
+          "postalCode": {
+            "type": "string",
+            "example": "81146"
+          },
+          "city": {
+            "type": "string",
+            "example": "Mosca"
+          },
+          "countryCode": {
+            "type": "string",
+            "example": "US"
+          },
+          "region": {
+            "type": "string",
+            "example": "Colorado"
+          }
+        }
+      },
+      "profilesSchema": {
+        "type": "object",
+        "properties": {
+          "network": {
+            "type": "string",
+            "example": "GitLab"
+          },
+          "username": {
+            "type": "string",
+            "example": "alexcochran"
+          },
+          "url": {
+            "type": "string",
+            "example": "https://gitlab.com/alexcochran"
+          }
+        }
+      }
     }
   }
 }
