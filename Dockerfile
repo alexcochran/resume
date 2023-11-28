@@ -13,4 +13,4 @@ RUN pnpm run build
 
 EXPOSE 5280
 
-CMD ["pnpm", "prod"]
+CMD ["pnpm", "start"]
