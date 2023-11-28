@@ -158,68 +158,7 @@
   },
   "components": {
     "schemas": {
-      "basicsSchema": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "example": "John Doe"
-          },
-          "label": {
-            "type": "string",
-            "example": "Programmer"
-          },
-          "image": {
-            "type": "string",
-            "example": "https://picsum.photos/200/300"
-          },
-          "email": {
-            "type": "string",
-            "example": "john@gmail.com"
-          },
-          "phone": {
-            "type": "string",
-            "example": "(912) 555-4321"
-          },
-          "url": {
-            "type": "string",
-            "example": "https://example.com"
-          },
-          "summary": {
-            "type": "string",
-            "example": "A summary of John Doe..."
-          },
-          "location": {
-            "type": "object",
-            "properties": {
-              "address": {
-                "type": "string",
-                "example": "2712 Broadway St"
-              },
-              "postalCode": {
-                "type": "string",
-                "example": "CA 94115"
-              },
-              "city": {
-                "type": "string",
-                "example": "San Francisco"
-              },
-              "countryCode": {
-                "type": "string",
-                "example": "US"
-              },
-              "region": {
-                "type": "string",
-                "example": "California"
-              }
-            }
-          }
-        },
-        "required": [
-          "name",
-          "label"
-        ]
-      }
+      "resumeSchema": {}
     }
   }
 }

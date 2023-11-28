@@ -24,20 +24,26 @@ const doc = {
   components: {
     schemas: {
       basicsSchema: {
-        $name: 'John Doe',
-        $label: 'Programmer',
+        $name: 'Alex Cochran',
+        $label: 'Software Engineer',
         image: 'https://picsum.photos/200/300',
         email: 'john@gmail.com',
         phone: '(912) 555-4321',
         url: 'https://example.com',
         summary: 'A summary of John Doe...',
-        location: {
-          address: '2712 Broadway St',
-          postalCode: 'CA 94115',
-          city: 'San Francisco',
-          countryCode: 'US',
-          region: 'California',
-        },
+        location: '#locationSchema',
+      },
+      locationSchema: {
+        address: '11500 Highway 150',
+        postalCode: '81146',
+        city: 'Mosca',
+        countryCode: 'US',
+        region: 'Colorado',
+      },
+      profilesSchema: {
+        network: 'GitLab',
+        username: 'alexcochran',
+        url: 'https://gitlab.com/alexcochran',
       },
     },
   },
