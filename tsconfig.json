@@ -12,7 +12,8 @@
     "resolveJsonModule": true
   },
 
-  "include": ["./*.js", "src/**/*.ts", "test/**/*.ts"],
+  "include": ["./*.js", "src/**/*.ts", "test/**/*.ts", "public/**/*.html", "public/jsonresume.html"],
+  "hooks": ["copy-files"],
 
   // Most ts-node options can be specified here using their programmatic names.
   "ts-node": {
@@ -23,7 +24,7 @@
     "compilerOptions": {
       "lib": ["es2023"],
       "module": "CommonJS",
-      "target": "es2022",
+      "target": "ES2023",
 
       "strict": true,
       "esModuleInterop": true,
