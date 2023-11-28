@@ -12,7 +12,7 @@
     "validate": "pnpx resumed validate",
     "render": "pnpx resumed render --output ./public/jsonresume.html",
     "husky-ready": "husky install",
-    "start": "pnpm install --prod && tsc && node ./dist/src/server.js",
+    "start": "pnpm install && tsc && node ./dist/src/server.js",
     "dev": "pnpm run render && nodemon src/server.ts",
     "build": "tsc",
     "lint": "eslint --fix src test",
