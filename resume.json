@@ -111,7 +111,7 @@
       "name": "Backend Development",
       "keywords": [
         "Python (Flask, Django)",
-        "node.js",
+        "Node.js (Express)",
         "Ruby (Rails)",
         "PHP",
         "REST APIs"
@@ -172,7 +172,7 @@
         "Jazz",
         "Funk",
         "Improvisation",
-        "Digital Audio Workstations"
+        "Digital audio workstations"
       ]
     }
   ]
