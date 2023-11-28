@@ -2,9 +2,10 @@
 
 <div align="center">
 
-[![Web Version](https://img.shields.io/badge/acochran.dev-blue?style=for-the-badge&color=%23470ff4)](https://resume.acochran.dev)
+[![Web Version](https://img.shields.io/badge/resume.acochran.dev-blue?style=for-the-badge&color=%23470ff4)](https://resume.acochran.dev)
 
-[![API Documentation](https://img.shields.io/badge/GitLab%3A%20AlexLab%20Cloud-%23554488?logo=gitlab&style=for-the-badge)](https://resume.acochran.dev/api/v1/docs)
+[![API Documentation](https://img.shields.io/badge/API%20Docs-%23554488?logo=gitlab&style=for-the-badge)](https://resume.acochran.dev/api/v1/docs)
+[![Code](https://img.shields.io/badge/Code-%23554488?logo=gitlab&style=for-the-badge)](https://gitlab.com/alexcochran/resume)
 
 </div>
 

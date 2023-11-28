@@ -11,6 +11,10 @@ const doc = {
       url: 'http://localhost:5280/api/v1',
       description: 'dev',
     },
+    {
+      url: 'https://resume.acochran.dev/api/v1',
+      description: 'prod',
+    },
     // { ... }
   ],
   tags: [
