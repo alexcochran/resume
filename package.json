@@ -13,6 +13,7 @@
     "render": "pnpx resumed render --output ./public/jsonresume.html",
     "prepare": "husky install",
     "start": "pnpm run render && tsc && node ./dist/src/server.js",
+    "prod": "pnpm install omit=dev && tsc && node ./dist/src/server.js",
     "dev": "pnpm run render && nodemon src/server.ts",
     "build": "tsc",
     "lint": "eslint --fix src test",
