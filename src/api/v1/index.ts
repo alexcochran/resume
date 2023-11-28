@@ -13,7 +13,7 @@ import path from 'path';
 
 const router = express.Router();
 
-router.get<{}, MessageResponse>('/docs', (req, res) => {
+router.get('/docs', (req, res) => {
   res
     .set(
       'Content-Security-Policy',
