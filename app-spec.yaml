@@ -1,9 +1,10 @@
-# App Spec for Digital Ocean deployment
-
 alerts:
 - rule: DEPLOYMENT_FAILED
 - rule: DOMAIN_FAILED
 - rule: DEPLOYMENT_LIVE
+domains:
+- domain: resume.acochran.dev
+  type: PRIMARY
 features:
 - buildpack-stack=ubuntu-22
 ingress:
@@ -12,23 +13,21 @@ ingress:
       name: api
     match:
       path:
-        prefix: /api
+        prefix: /
   - component:
-      name: website
+      name: api
     match:
       path:
-        prefix: /
-name: your-app
-region: nyc
+        prefix: /api/v1
+name: jsonresume-alexcochran
+region: sfo
 services:
-- environment_slug: node
+- dockerfile_path: Dockerfile
   gitlab:
     branch: main
     deploy_on_push: true
     repo: alexcochran/resume
-  http_port: 5000
+  http_port: 5280
   instance_count: 1
-  instance_size_slug: professional-xs
+  instance_size_slug: basic-xxs
   name: api
-  run_command: bin/api
-  source_dir: /
