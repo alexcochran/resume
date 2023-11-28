@@ -8,7 +8,7 @@ const doc = {
   },
   servers: [
     {
-      url: 'http://localhost:5000',
+      url: 'http://localhost:5280/api/v1',
       description: 'dev',
     },
     // { ... }
@@ -21,10 +21,29 @@ const doc = {
     },
     // { ... }
   ],
-  components: {}, // by default: empty object
+  components: {
+    schemas: {
+      basicsSchema: {
+        $name: 'John Doe',
+        $label: 'Programmer',
+        image: 'https://picsum.photos/200/300',
+        email: 'john@gmail.com',
+        phone: '(912) 555-4321',
+        url: 'https://example.com',
+        summary: 'A summary of John Doe...',
+        location: {
+          address: '2712 Broadway St',
+          postalCode: 'CA 94115',
+          city: 'San Francisco',
+          countryCode: 'US',
+          region: 'California',
+        },
+      },
+    },
+  },
 };
 
 const outputFile = './public/openapi-spec.json';
-const routes = ['./app.ts'];
+const routes = ['./src/api/v1/index.ts'];
 
 swaggerAutogen({ openapi: '3.1.0' })(outputFile, routes, doc);

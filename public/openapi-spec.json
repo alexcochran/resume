@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:5000",
+      "url": "http://localhost:5280/api/v1",
       "description": "dev"
     }
   ],
@@ -17,5 +17,209 @@
       "description": ""
     }
   ],
-  "paths": {}
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "Resume"
+        ],
+        "summary": "Retrieve Alex's entire JSON Resume.",
+        "description": "",
+        "operationId": "getResume",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/downloads/html": {
+      "get": {
+        "tags": [
+          "Downloads"
+        ],
+        "summary": "Download the copy of Alex's JSON Resume on this server as an HTML file.",
+        "description": "",
+        "operationId": "downloadHtmlFile",
+        "responses": {
+          "200": {
+            "description": "Successful file download.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/basicsSchema"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/basics/": {
+      "get": {
+        "tags": [
+          "Basics"
+        ],
+        "summary": "Retrieve Alex's basic identifying information.",
+        "description": "",
+        "operationId": "getBasicInfo",
+        "responses": {
+          "200": {
+            "description": "Successful request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/basicsSchema"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/basics/profiles": {
+      "get": {
+        "tags": [
+          "Basics"
+        ],
+        "summary": "Get the Alex's online profiles.",
+        "description": "",
+        "operationId": "getOnlineProfiles",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/education/": {
+      "get": {
+        "tags": [
+          "Education"
+        ],
+        "summary": "Retrieve Alex's education information.",
+        "description": "",
+        "operationId": "getEducation",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/interests/": {
+      "get": {
+        "tags": [
+          "Interests"
+        ],
+        "summary": "Retrieve Alex's listed interests.",
+        "description": "",
+        "operationId": "getInterests",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/skills/": {
+      "get": {
+        "tags": [
+          "Skills"
+        ],
+        "summary": "Retrieve Alex's listed skills.",
+        "description": "",
+        "operationId": "getSkills",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/work/": {
+      "get": {
+        "tags": [
+          "Work"
+        ],
+        "summary": "Retrieve Alex's listed work history.",
+        "description": "",
+        "operationId": "getWork",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "basicsSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "John Doe"
+          },
+          "label": {
+            "type": "string",
+            "example": "Programmer"
+          },
+          "image": {
+            "type": "string",
+            "example": "https://picsum.photos/200/300"
+          },
+          "email": {
+            "type": "string",
+            "example": "john@gmail.com"
+          },
+          "phone": {
+            "type": "string",
+            "example": "(912) 555-4321"
+          },
+          "url": {
+            "type": "string",
+            "example": "https://example.com"
+          },
+          "summary": {
+            "type": "string",
+            "example": "A summary of John Doe..."
+          },
+          "location": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string",
+                "example": "2712 Broadway St"
+              },
+              "postalCode": {
+                "type": "string",
+                "example": "CA 94115"
+              },
+              "city": {
+                "type": "string",
+                "example": "San Francisco"
+              },
+              "countryCode": {
+                "type": "string",
+                "example": "US"
+              },
+              "region": {
+                "type": "string",
+                "example": "California"
+              }
+            }
+          }
+        },
+        "required": [
+          "name",
+          "label"
+        ]
+      }
+    }
+  }
 }
