@@ -300,7 +300,12 @@
     }
 
     section.interests .item {
-      margin-bottom: var(--spacing);
+      margin: 0;
+      padding: 0 0 var(--spacing);
+    }
+
+    section.interests .item:first-child {
+      margin-top: var(--spacing);
     }
 
     section.interests .item:last-child {
@@ -315,6 +320,22 @@
       text-transform: uppercase;
       vertical-align: top;
       white-space: nowrap;
+    }
+
+    section.interests h4 {
+      /* display: inline-block; */
+      font-size: 90%;
+      font-weight: 600;
+      margin: 0 0 var(--spacing-small) 0;
+      text-transform: uppercase;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    section.skills .item .keywords {
+      display: inline;
+      font-size: 90%;
+      vertical-align: top;
     }
 
     section.references .item blockquote {
@@ -671,7 +692,7 @@
     <section id="interests" class="interests">
       <div class="item">
         <h2>Interests</h2>
-        <h4 class="name">Engineering</h4>
+        <h4>Engineering</h4>
         <div class="keywords">
           GNU/Linux,
           Dev Containers,
@@ -691,7 +712,7 @@
         </div>
       </div>
       <div class="item">
-        <h4 class="name">Music</h4>
+        <h4>Music</h4>
         <div class="keywords">
           Guitar,
           Electronic,
