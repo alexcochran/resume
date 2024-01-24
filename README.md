@@ -10,14 +10,14 @@
 
 </div>
 
-This project makes use of [rbardini's `resumed` package](https://github.com/rbardini/resumed), which offers a CLI for JSON Resume utilities.
-
 ## Usage
 
 This repo is equipped with a [Dev Container](https://containers.dev/) configuration that sets up a supported editor with
 extensions and settings that help with editing JSON files according to the [JSON Resume schema](https://jsonresume.org/schema/).
 
 The [JSON Resume schema](https://jsonresume.org/schema/) is configured with the editor to lint and provide field suggestions.
+
+This project makes use of [rbardini's `resumed` package](https://github.com/rbardini/resumed), which offers a CLI for JSON Resume utilities.
 
 ### Themes
 
