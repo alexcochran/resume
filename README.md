@@ -1,6 +1,6 @@
-# alexcochran's JSON Resume
+# alexcochran's [JSON Resume](https://jsonresume.org/)
 
-> My [JSON Resume](https://jsonresume.org/) and supporting infrastructure
+> My resume and supporting infrastructure
 
 <div align="center">
 
