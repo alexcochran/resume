@@ -10,7 +10,7 @@
 
 </div>
 
-This project makes use of [rbardini's `resumed` project](https://github.com/rbardini/resumed), which offers a CLI for JSON Resume utilities.
+This project makes use of [rbardini's `resumed` package](https://github.com/rbardini/resumed), which offers a CLI for JSON Resume utilities.
 
 ## Usage
 
