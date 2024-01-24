@@ -1,6 +1,6 @@
 # alexcochran's JSON Resume
 
- My [JSON Resume](https://jsonresume.org/) and supporting infrastructure
+> My [JSON Resume](https://jsonresume.org/) and supporting infrastructure
 
 <div align="center">
 
