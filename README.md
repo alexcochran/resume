@@ -1,5 +1,7 @@
 # alexcochran's JSON Resume
 
+ My [JSON Resume](https://jsonresume.org/) and supporting infrastructure
+
 <div align="center">
 
 [![Web Version](https://img.shields.io/badge/resume.acochran.dev-blue?style=for-the-badge&color=%23470ff4)](https://resume.acochran.dev)
@@ -7,8 +9,6 @@
 [![Code](https://img.shields.io/badge/Code-%23554488?logo=gitlab&style=for-the-badge)](https://gitlab.com/alexcochran/resume)
 
 </div>
-
-> My [JSON Resume](https://jsonresume.org/) and supporting infrastructure
 
 This project makes use of [rbardini's `resumed` project](https://github.com/rbardini/resumed), which offers a CLI for JSON Resume utilities.
 
